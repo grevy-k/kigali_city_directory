@@ -1,135 +1,116 @@
-Kigali City Services & Places Directory
+# Kigali City Services & Places Directory
 
-This project is a Flutter mobile application that helps users discover important services and places around Kigali City.
+A Flutter mobile application that helps users discover important services and places around Kigali City.
 
-The application allows users to browse locations such as hospitals, police stations, libraries, cafés, restaurants, parks, and tourist attractions.
+Users can browse locations such as hospitals, police stations, libraries, cafés, restaurants, parks, and tourist attractions.
 
-Authenticated users can create, update, and delete listings, and all data is stored in Firebase Cloud Firestore with real-time updates.
+Authenticated users can create, update, and delete listings. All data is stored in **Firebase Cloud Firestore** with **real-time updates**.
 
-Technologies Used
+---
 
-The project was built using the following technologies:
+## Technologies Used
 
-Flutter – mobile application development
+- **Flutter** — mobile application development
+- **Firebase Authentication** — user login and signup
+- **Cloud Firestore** — database for storing listings
+- **Provider** — state management
+- **OpenStreetMap (flutter_map)** — embedded map display
+- **URL Launcher** — opening navigation directions in Google Maps
 
-Firebase Authentication – user login and signup
+---
 
-Cloud Firestore – database for storing listings
+## Main Features
 
-Provider – state management
+### 1) User Authentication
 
-OpenStreetMap (flutter_map) – embedded map display
+Users can create an account using email and password. Features include:
 
-URL Launcher – opening navigation directions in Google Maps
-
-Main Features
-User Authentication
-
-Users can create an account using email and password.
-
-Features include:
-
-User signup
-
-Login
-
-Logout
-
-Email verification
+- User signup
+- Login
+- Logout
+- Email verification
 
 Each user also has a profile stored in Firestore.
 
-Directory of Services
+### 2) Directory of Services
 
-The directory displays all listings stored in Firestore.
+The directory displays all listings stored in Firestore. Each listing contains:
 
-Each listing contains:
-
-Place name
-
-Category
-
-Address
-
-Phone number
-
-Description
-
-Geographic location
+- Place name
+- Category
+- Address
+- Phone number
+- Description
+- Geographic location
 
 Users can:
 
-Browse services
+- Browse services
+- Search listings
+- Filter listings by category
 
-Search listings
+### 3) Create and Manage Listings
 
-Filter listings by category
+Authenticated users can create and manage their own listings. Users can:
 
-Create and Manage Listings
-
-Authenticated users can create and manage their own listings.
-
-Users can:
-
-Add a new listing
-
-Edit their listing
-
-Delete their listing
+- Add a new listing
+- Edit their listing
+- Delete their listing
 
 Each listing is linked to the user UID who created it.
 
-Map Integration
+### 4) Map Integration
 
 The application includes an embedded map that displays locations using OpenStreetMap.
 
 Users can:
 
-View the location marker
+- View the location marker
+- Open navigation directions in Google Maps
 
-Open navigation directions in Google Maps
-
-Real-Time Updates
+### 5) Real-Time Updates
 
 The directory updates automatically whenever a listing is added, edited, or deleted in Firestore.
 
 This allows all users to see updates immediately.
 
-Application Screens
+---
+
+## Application Screens
 
 The application includes the following main screens:
 
-Login Screen
+- Login Screen
+- Signup Screen
+- Email Verification Screen
+- Directory Screen
+- My Listings Screen
+- Map View Screen
+- Settings Screen
+- Listing Detail Screen
+- Add/Edit Listing Screen
 
-Signup Screen
+Navigation between these screens is handled using a **Bottom Navigation Bar**.
 
-Email Verification Screen
+---
 
-Directory Screen
-
-My Listings Screen
-
-Map View Screen
-
-Settings Screen
-
-Listing Detail Screen
-
-Add/Edit Listing Screen
-
-Navigation between these screens is handled using a Bottom Navigation Bar.
-
-Firestore Database Structure
+## Firestore Database Structure
 
 The database contains two main collections.
 
-Users Collection
+### Users Collection
+
+```
 users
    └── userUID
          email
          displayName
          createdAt
-Listings Collection
+```
+
+### Listings Collection
+
+```
 listings
    └── listingID
          name
@@ -141,13 +122,17 @@ listings
          createdBy
          createdAt
          updatedAt
+```
 
-The createdBy field links each listing to the user who created it.
+The `createdBy` field links each listing to the user who created it.
 
-Project Structure
+---
 
-The Flutter project is organized into several folders.
+## Project Structure
 
+The Flutter project is organized into several folders:
+
+```
 lib
  ├── models
  │    listing.dart
@@ -172,60 +157,71 @@ lib
  │    listing_tile.dart
  │
  └── main.dart
+```
 
 This structure separates the user interface, state management, and backend services.
 
-How to Run the Project
-1. Clone the Repository
+---
+
+## How to Run the Project
+
+### 1) Clone the Repository
+
+```bash
 git clone <your-repository-link>
-2. Open the Project
+```
+
+### 2) Open the Project
 
 Open the project using either:
 
-Visual Studio Code
+- Visual Studio Code
+- Android Studio
 
-Android Studio
+### 3) Install Dependencies
 
-3. Install Dependencies
+```bash
 flutter pub get
-4. Configure Firebase
+```
+
+### 4) Configure Firebase
 
 Add your Firebase configuration files:
 
-google-services.json for Android
-
-GoogleService-Info.plist for iOS
+- `google-services.json` for Android
+- `GoogleService-Info.plist` for iOS
 
 Enable the following services in Firebase:
 
-Firebase Authentication
+- Firebase Authentication
+- Cloud Firestore
 
-Cloud Firestore
+### 5) Run the Application
 
-5. Run the Application
+```bash
 flutter run
+```
 
 You can run the app on:
 
-A physical Android device
+- A physical Android device
+- An Android emulator
 
-An Android emulator
+---
 
-Future Improvements
+## Future Improvements
 
 Possible future enhancements include:
 
-User ratings and reviews
+- User ratings and reviews
+- Image uploads for listings
+- Nearby places feature
+- Push notifications
+- AI-based place recommendations
 
-Image uploads for listings
+---
 
-Nearby places feature
+## Author
 
-Push notifications
-
-AI-based place recommendations
-
-Author
-
-Grevy Karuretwa
+**Grevy Karuretwa**  
 Flutter Developer | Software Engineering Student

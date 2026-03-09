@@ -168,7 +168,7 @@ This structure separates the user interface, state management, and backend servi
 ### 1) Clone the Repository
 
 ```bash
-git clone <your-repository-link>
+git clone <this-repository-link>
 ```
 
 ### 2) Open the Project

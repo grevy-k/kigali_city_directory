@@ -1,12 +1,12 @@
-##Kigali City Services & Places Directory
+Kigali City Services & Places Directory
 
 This project is a Flutter mobile application that helps users discover important services and places around Kigali City.
 
 The application allows users to browse locations such as hospitals, police stations, libraries, cafés, restaurants, parks, and tourist attractions.
 
-The app also allows authenticated users to create, update, and delete listings, and all data is stored in Firebase Firestore with real-time updates.
+Authenticated users can create, update, and delete listings, and all data is stored in Firebase Cloud Firestore with real-time updates.
 
-##Technologies Used
+Technologies Used
 
 The project was built using the following technologies:
 
@@ -22,75 +22,72 @@ OpenStreetMap (flutter_map) – embedded map display
 
 URL Launcher – opening navigation directions in Google Maps
 
-##Main Features
-
-The application includes the following features:
-
-##User Authentication
+Main Features
+User Authentication
 
 Users can create an account using email and password.
 
 Features include:
 
-user signup
+User signup
 
-login
+Login
 
-logout
+Logout
 
-email verification
+Email verification
 
 Each user also has a profile stored in Firestore.
 
-##Directory of Services
+Directory of Services
 
-The directory displays all available listings stored in Firestore.
+The directory displays all listings stored in Firestore.
 
 Each listing contains:
 
-place name
+Place name
 
-category
+Category
 
-address
+Address
 
-phone number
+Phone number
 
-description
+Description
 
-geographic location
+Geographic location
 
 Users can:
 
-browse services
+Browse services
 
-search listings
+Search listings
 
-filter listings by category
+Filter listings by category
 
-##Create and Manage Listings
+Create and Manage Listings
 
 Authenticated users can create and manage their own listings.
 
 Users can:
 
-add a new listing
+Add a new listing
 
-edit their listing
+Edit their listing
 
-delete their listing
+Delete their listing
 
 Each listing is linked to the user UID who created it.
 
-##Map Integration
+Map Integration
 
 The application includes an embedded map that displays locations using OpenStreetMap.
 
-##Users can:
+Users can:
 
-view the location marker
+View the location marker
 
-open navigation directions in Google Maps.
+Open navigation directions in Google Maps
 
 Real-Time Updates
 
@@ -98,7 +95,7 @@ The directory updates automatically whenever a listing is added, edited, or dele
 
 This allows all users to see updates immediately.
 
-##Application Screens
+Application Screens
 
 The application includes the following main screens:
 
@@ -122,7 +119,7 @@ Add/Edit Listing Screen
 
 Navigation between these screens is handled using a Bottom Navigation Bar.
 
-##Firestore Database Structure
+Firestore Database Structure
 
 The database contains two main collections.
 
@@ -176,28 +173,59 @@ lib
  │
  └── main.dart
 
-This structure separates UI, state management, and backend services.
+This structure separates the user interface, state management, and backend services.
 
 How to Run the Project
-
-Clone the repository
-
+1. Clone the Repository
 git clone <your-repository-link>
+2. Open the Project
 
-Open the project in VS Code or Android Studio.
+Open the project using either:
 
-Install dependencies
+Visual Studio Code
 
+Android Studio
+
+3. Install Dependencies
 flutter pub get
+4. Configure Firebase
 
-Configure Firebase for the project.
+Add your Firebase configuration files:
 
-Run the application
+google-services.json for Android
 
+GoogleService-Info.plist for iOS
+
+Enable the following services in Firebase:
+
+Firebase Authentication
+
+Cloud Firestore
+
+5. Run the Application
 flutter run
 
 You can run the app on:
 
-a physical Android device
+A physical Android device
 
-an Android emulator
+An Android emulator
+
+Future Improvements
+
+Possible future enhancements include:
+
+User ratings and reviews
+
+Image uploads for listings
+
+Nearby places feature
+
+Push notifications
+
+AI-based place recommendations
+
+Author
+
+Grevy Karuretwa
+Flutter Developer | Software Engineering Student
